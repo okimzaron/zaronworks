@@ -33,7 +33,7 @@ window.PROJECTS = [
     title: 'Reaper',
     summary: 'A VEX V5 template with MCL, odometry, autonomous selection and custom driver controls, with full docs.',
     tags: ['C++', 'PROS', 'MCL', 'Odometry'],
-    href: 'https://reaperlib.com/',
+    href: 'https://reaperlib.online/',
     cta: 'Enter Reaper'
   },
   {
