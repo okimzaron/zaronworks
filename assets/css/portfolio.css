@@ -534,6 +534,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 }
 .license.tone-brown .license-icon { background: rgba(154,106,72,.2); border-color: rgba(201,150,112,.45); color: #f1dcc8; }
 .license-icon svg { width: 30px; height: 30px; }
+/* picture icons sit on a cream tile so the black artwork reads on the dark card */
+.license-icon.has-img, .license.tone-brown .license-icon.has-img {
+  width: 64px; height: 64px; padding: 7px; background: #fdfbd4; border-color: rgba(253,251,212,.6);
+  box-shadow: 0 8px 18px -10px rgba(0,0,0,.7);
+}
+.license-icon.has-img img { width: 100%; height: 100%; object-fit: contain; }
 .license-code { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: .12em; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text); background: rgba(0,0,0,.25); }
 .license-body { padding: 16px 18px 18px; }
 .license h4 { font-family: var(--font-display); font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; margin: 0; color: var(--text); }

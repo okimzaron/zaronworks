@@ -165,13 +165,22 @@
     // wine glass
     glass: '<path d="M7 3h10l-.6 5.5a4.4 4.4 0 0 1-8.8 0z"/><path d="M7.4 7h9.2"/><path d="M12 13v7"/><path d="M8.5 21h7"/>'
   };
+  // Picture icons (used when one exists; the SVGs above are the fallback)
+  var ICON_IMAGES = {
+    drone: 'assets/img/lic-drone.png',
+    hardhat: 'assets/img/lic-hardhat.png',
+    chef: 'assets/img/lic-chef.png',
+    glass: 'assets/img/lic-bottle.png'
+  };
   var licEl = document.querySelector('[data-licenses]');
   if (licEl) {
     licEl.innerHTML = LICENSES.map(function (l) {
       return (
         '<article class="license' + (l.tone === 'brown' ? ' tone-brown' : '') + '">' +
           '<div class="license-top">' +
-            '<div class="license-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[l.icon] || ICONS.drone) + '</svg></div>' +
+            (ICON_IMAGES[l.icon]
+              ? '<div class="license-icon has-img"><img src="' + ICON_IMAGES[l.icon] + '" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>'
+              : '<div class="license-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[l.icon] || ICONS.drone) + '</svg></div>') +
             (l.code ? '<span class="license-code">' + esc(l.code) + '</span>' : '') +
           '</div>' +
           '<div class="license-body">' +
