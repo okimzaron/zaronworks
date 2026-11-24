@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Za'Ron Lee</title>
+  <meta name="description" content="Za'Ron Lee: photographer, filmer, and lead coder and driver for VEX team 4588G Gambit. Creator of Reaper.">
+  <meta name="theme-color" content="#0b090c">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>try{if(!localStorage.getItem('zl-intro-seen')||/[?&]intro/.test(location.search))document.documentElement.classList.add('zl-intro-pending');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:ital,wght@0,500;0,700;1,700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="home">
+  <a class="skip-link" href="#work">Skip to projects</a>
+
+  <!-- Desktop: header slides down when the mouse reaches the top edge. Phones: hidden over the collage, shown after. -->
+  <div class="header-hint" aria-hidden="true"></div>
+  <header class="site-header is-hidden" data-header>
+    <div class="container nav">
+      <a class="brand" href="./" aria-label="Home">
+        <span class="brand-mark">ZL</span>
+        <span class="brand-name">Za'Ron Lee</span>
+      </a>
+      <nav class="nav-links" id="nav-menu" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-reaper" href="https://reaperlib.com/"><span class="dot" aria-hidden="true"></span>Reaper</a>
+      </nav>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-controls="nav-menu" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 1. COLLAGE ============ -->
+    <section class="collage-section" data-collage-section aria-label="Za'Ron Lee: gallery">
+      <h1 class="visually-hidden">Za'Ron Lee</h1>
+      <div class="collage" data-collage></div>
+      <!-- Name drawn over the collage. The two lines sit above and below the center photo, leaving it clear. -->
+      <div class="name-overlay" aria-hidden="true">
+        <span class="name-line name-top">Za'Ron</span>
+        <span class="name-line name-bottom">Lee</span>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROJECTS ============ -->
+    <section class="work" id="work" aria-label="Projects">
+      <div class="container">
+        <div class="showcase" data-showcase></div>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT ============ -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about-copy reveal">
+            <h2>I'm Za'Ron Lee.</h2>
+            <p>
+              I'm a senior in high school, a <strong>photographer</strong> and <strong>filmer</strong>, and a member
+              of <strong>4588G Gambit</strong>, where I'm the lead coder and driver.
+            </p>
+            <p>
+              I've built projects like <a class="inline-link" href="https://reaperlib.com/">Reaper</a>, earned my
+              <strong>FAA Part 107</strong> license in summer 2026, and I'm OSHA certified with food handler
+              and TABC licenses.
+            </p>
+          </div>
+
+          <div class="skills reveal">
+            <div class="skill-card">
+              <h3>Software</h3>
+              <ul class="tag-list"><li>C++</li><li>PROS</li><li>Python</li><li>JavaScript</li><li>Git</li></ul>
+            </div>
+            <div class="skill-card">
+              <h3>Hardware</h3>
+              <ul class="tag-list"><li>VEX V5</li><li>Driving</li><li>CAD</li><li>Sensors</li><li>3D printing</li></ul>
+            </div>
+            <div class="skill-card">
+              <h3>Drones</h3>
+              <ul class="tag-list"><li>Part 107 operations</li><li>Aerial photo &amp; video</li><li>Flight planning</li></ul>
+            </div>
+            <div class="skill-card">
+              <h3>Creative</h3>
+              <ul class="tag-list"><li>Photography</li><li>Filming</li><li>Editing</li><li>Logo design</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="license-grid reveal" data-licenses></div>
+      </div>
+    </section>
+
+    <!-- ============ 4. CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner reveal">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a class="contact-item" href="mailto:notzaron@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            notzaron@gmail.com
+          </a>
+          <a class="contact-item" href="https://www.instagram.com/ZaronWorks/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            @ZaronWorks
+          </a>
+          <!-- GitHub goes here later -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year></span> Za'Ron Lee</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox (only opens when you click a collage image) -->
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lb-close" type="button" data-lb-close aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" type="button" data-lb-prev aria-label="Previous image">‹</button>
+    <img alt="" data-lb-img>
+    <button class="lb-nav lb-next" type="button" data-lb-next aria-label="Next image">›</button>
+  </div>
+
+  <!-- Turns black-on-white line art into see-through lavender lines (used for the scythe) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="ink-lavender" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 0 0 0.86  0 0 0 0 0.79  0 0 0 0 1  -0.2126 -0.7152 -0.0722 1 0"/>
+    </filter>
+    <filter id="gambit-ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.31  0 0 0 0 0.176  0 0 0 0 0.439  -0.2976 -1.0013 -0.1011 1.3 0"/></filter>
+  </svg>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/intro.js"></script>
+</body>
+</html>
