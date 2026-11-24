@@ -21,10 +21,10 @@
   --reaper: #8f6bd6;
 
   --radius: 16px;
-  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-display: 'AZN Unified', 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
-  --font-tech: 'Space Grotesk', var(--font-body);
+  --font-tech: 'AZN Unified', 'Space Grotesk', var(--font-body);
 }
 
 /* ---------- Header / nav ---------- */
@@ -547,3 +547,22 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .license-grid { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1100px) { .license-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px)  { .license-grid { grid-template-columns: 1fr; } }
+
+
+/* =========================================================
+   AZN Unified on every title, nav item, button and label
+   (paragraphs stay in Inter for readability)
+   ========================================================= */
+h1, h2, h3, h4,
+.brand-name, .brand-mark, .nav-links a, .btn, .contact-item, .back-link,
+.panel-cta, .sc-close, .sc-hint, .panel-tags li, .tag-list li, .member-roles li,
+.license-code, .license-meta, .page-meta span, .name-line, .site-footer p,
+.lb-close, .lb-nav, .zi-skip {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.section h2, .about-copy h2, .contact h2, .page-hero h1, .sc-body h3, .theme-reaper h3, .theme-gambit h3,
+.gambit-team h2, .reaper-door h3, .member-card h3, .page-gambit .page-hero h1 { letter-spacing: 0.01em; font-weight: 400; }
+.name-line { letter-spacing: 0.02em; }
+.tag-list li, .panel-tags li, .member-roles li, .license-code, .license-meta { font-size: 12.5px; }

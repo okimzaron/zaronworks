@@ -4,6 +4,18 @@
    tokens; this file only uses the token NAMES.
    ========================================================= */
 
+/* AZN Unified (AthayaDZN): display font for titles, nav, buttons and labels.
+   It's already oblique and single-weight; registering it for normal + italic and
+   every weight stops the browser from faking a second slant or a bold. */
+@font-face {
+  font-family: 'AZN Unified'; src: url('../fonts/azn-unified-oblique.otf') format('opentype');
+  font-style: normal; font-weight: 100 900; font-display: swap;
+}
+@font-face {
+  font-family: 'AZN Unified'; src: url('../fonts/azn-unified-oblique.otf') format('opentype');
+  font-style: italic; font-weight: 100 900; font-display: swap;
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
