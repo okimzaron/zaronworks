@@ -566,3 +566,38 @@ h1, h2, h3, h4,
 .gambit-team h2, .reaper-door h3, .member-card h3, .page-gambit .page-hero h1 { letter-spacing: 0.01em; font-weight: 400; }
 .name-line { letter-spacing: 0.02em; }
 .tag-list li, .panel-tags li, .member-roles li, .license-code, .license-meta { font-size: 12.5px; }
+
+/* =========================================================
+   Header pull-down (desktop). Marked !important so it still animates
+   when the OS "reduce motion" setting turns other transitions off.
+   ========================================================= */
+@media (hover: hover) and (pointer: fine) {
+  .site-header {
+    transition: transform .34s cubic-bezier(.55, 0, .75, .2), opacity .26s ease-in,
+                background .3s ease, border-color .3s ease, box-shadow .3s ease !important;
+  }
+  .site-header.is-peek, .site-header:hover, .site-header:focus-within {
+    transition: transform .62s cubic-bezier(.2, 1.25, .35, 1), opacity .22s ease-out,
+                background .3s ease, border-color .3s ease, box-shadow .3s ease !important;
+    box-shadow: 0 18px 40px -22px rgba(0, 0, 0, .85);
+  }
+  /* contents drop in a beat behind the bar, one after another */
+  .site-header .brand, .site-header .nav-links a {
+    opacity: 0; transform: translateY(-10px);
+    transition: opacity .2s ease, transform .2s ease !important;
+  }
+  .site-header.is-peek .brand, .site-header.is-peek .nav-links a,
+  .site-header:hover .brand, .site-header:hover .nav-links a,
+  .site-header:focus-within .brand, .site-header:focus-within .nav-links a {
+    opacity: 1; transform: none;
+    transition: opacity .35s ease, transform .5s cubic-bezier(.2, 1.3, .35, 1) !important;
+  }
+  .site-header.is-peek .brand, .site-header:hover .brand { transition-delay: .08s !important; }
+  .site-header.is-peek .nav-links a:nth-child(1), .site-header:hover .nav-links a:nth-child(1) { transition-delay: .12s !important; }
+  .site-header.is-peek .nav-links a:nth-child(2), .site-header:hover .nav-links a:nth-child(2) { transition-delay: .16s !important; }
+  .site-header.is-peek .nav-links a:nth-child(3), .site-header:hover .nav-links a:nth-child(3) { transition-delay: .20s !important; }
+  .site-header.is-peek .nav-links a:nth-child(4), .site-header:hover .nav-links a:nth-child(4) { transition-delay: .24s !important; }
+  /* the little tab at the top stretches out of the way as the bar comes down */
+  .header-hint { transition: opacity .25s ease, transform .3s ease !important; transform-origin: top; }
+  .header-hint.is-hidden { opacity: 0; transform: scaleX(2.2) scaleY(.4); }
+}
