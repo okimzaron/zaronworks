@@ -2,6 +2,32 @@
 (function () {
   document.documentElement.classList.add('js');
 
+  // Intro on/off: <button data-intro-toggle="storageKey">. Off is stored as '1'; on by default.
+  document.querySelectorAll('[data-intro-toggle]').forEach(function (btn) {
+    if (btn.hasAttribute('data-intro-bound')) return;   // both common.js and reaper.js run on Reaper pages
+    btn.setAttribute('data-intro-bound', '');
+    var key = btn.getAttribute('data-intro-toggle');
+    function isOff() { try { return !!localStorage.getItem(key); } catch (e) { return false; } }
+    function paint() {
+      var off = isOff();
+      btn.classList.toggle('is-off', off);
+      btn.setAttribute('aria-pressed', String(!off));
+      var label = off ? 'Intro animation: off (click to turn on)' : 'Intro animation: on (click to turn off)';
+      btn.setAttribute('title', label);
+      btn.setAttribute('aria-label', label);
+      var txt = btn.querySelector('[data-intro-label]');
+      if (txt) txt.textContent = off ? 'Intro off' : 'Intro on';
+    }
+    btn.addEventListener('click', function () {
+      var turningOn = isOff();
+      try { if (turningOn) localStorage.removeItem(key); else localStorage.setItem(key, '1'); } catch (e) { /* storage blocked */ }
+      paint();
+      // Turning it back on plays the intro right away so you can see it.
+      if (turningOn && window.siteIntro && window.siteIntro.key === key) window.siteIntro.play();
+    });
+    paint();
+  });
+
   // Mobile nav toggle: <button data-nav-toggle aria-controls="id">
   document.querySelectorAll('[data-nav-toggle]').forEach(function (btn) {
     var menu = document.getElementById(btn.getAttribute('aria-controls'));

@@ -608,3 +608,21 @@ h1, h2, h3, h4,
   .header-hint.is-hidden { opacity: 0; transform: scaleX(2.2) scaleY(.4); }
 }
 .brand-mark.brand-cat { display: block; object-fit: cover; background: none; padding: 0; }
+
+/* Intro animation on/off */
+.nav { gap: 16px; }
+.nav-links { margin-left: auto; }
+.intro-toggle {
+  display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--line-strong); background: transparent; color: var(--muted);
+  font: inherit; font-size: 13px; cursor: pointer; transition: color .2s, border-color .2s, background .2s;
+}
+.intro-toggle:hover { color: var(--text); border-color: var(--accent); }
+.intro-toggle svg { width: 16px; height: 16px; }
+.intro-toggle .intro-slash { display: none; }
+.intro-toggle.is-off { opacity: .7; }
+.intro-toggle.is-off .intro-slash { display: inline; }
+.intro-toggle:not(.is-off) { color: var(--accent); border-color: rgba(179,154,230,.45); }
+.page-gambit .site-header:not(.is-scrolled) .intro-toggle { color: var(--gambit-purple); border-color: rgba(79,45,112,.45); }
+.page-cooking .site-header:not(.is-scrolled) .intro-toggle { color: #2b1810; border-color: rgba(43,24,16,.4); }
+@media (max-width: 820px) { .intro-toggle span { display: none; } .intro-toggle { padding: 7px; margin-left: auto; } }

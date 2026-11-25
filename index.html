@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0b090c">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <script>try{if(!localStorage.getItem('zl-intro-seen')||/[?&]intro/.test(location.search))document.documentElement.classList.add('zl-intro-pending');}catch(e){}</script>
+  <script>try{if((!localStorage.getItem('zl-intro-off')&&!location.hash)||/[?&]intro/.test(location.search))document.documentElement.classList.add('zl-intro-pending');}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:ital,wght@0,500;0,700;1,700&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -32,6 +32,7 @@
         <a href="#contact">Contact</a>
         <a class="nav-reaper" href="https://reaperlib.online/"><span class="dot" aria-hidden="true"></span>Reaper</a>
       </nav>
+      <button class="intro-toggle" type="button" data-intro-toggle="zl-intro-off" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5z" fill="currentColor"/><path class="intro-slash" d="M4.5 4.5l15 15"/></svg><span data-intro-label>Intro on</span></button>
       <button class="nav-toggle" type="button" data-nav-toggle aria-controls="nav-menu" aria-expanded="false" aria-label="Menu">
         <span></span><span></span>
       </button>

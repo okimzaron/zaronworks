@@ -2,16 +2,16 @@
    1. A crumpled ball of paper drops in, wobbles, and un-crumples into a flat sheet.
    2. "Za'Ron Lee" is handwritten across it, left to right, with a pen tip.
    3. The sheet lifts away to reveal the collage.
-   Plays once per browser (localStorage). Click or press any key to skip. Add ?intro to replay.
+   Plays on every visit unless turned off with the header's intro button (localStorage 'zl-intro-off'). Click or press any key to skip. Add ?intro to replay.
    Uses the Web Animations API, so it still plays when CSS animations are reduced. */
 (function () {
   var root = document.documentElement;
-  var KEY = 'zl-intro-seen';
+  var KEY = 'zl-intro-off';
   var force = /[?&]intro\b/.test(location.search);
-  var seen = true;
-  try { seen = !!localStorage.getItem(KEY); } catch (e) { seen = true; }
-  if (seen && !force) { root.classList.remove('zl-intro-pending'); return; }
-  try { localStorage.setItem(KEY, '1'); } catch (e) { /* ignore */ }
+  var off = false;
+  try { off = !!localStorage.getItem(KEY); } catch (e) { off = false; }
+  // Links straight to a section (#work, #about, etc.) skip the intro.
+  if ((off || location.hash) && !force) { root.classList.remove('zl-intro-pending'); return; }
 
   var NAME = "Za'Ron Lee";
   var vw = window.innerWidth, vh = window.innerHeight;
