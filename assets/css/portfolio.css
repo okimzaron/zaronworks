@@ -607,3 +607,4 @@ h1, h2, h3, h4,
   .header-hint { transition: opacity .25s ease, transform .3s ease !important; transform-origin: top; }
   .header-hint.is-hidden { opacity: 0; transform: scaleX(2.2) scaleY(.4); }
 }
+.brand-mark.brand-cat { display: block; object-fit: cover; background: none; padding: 0; }
